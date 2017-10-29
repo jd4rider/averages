@@ -58,11 +58,3 @@ function average(){
   return avg;
     
 }
-
-//navigation fix on mobile
-
- $(document).on('focus', 'input, textarea', function() {
-      setTimeout(function() {
-          window.scrollTo(document.body.scrollLeft, document.body.scrollTop);
-      }, 0);
-  });
