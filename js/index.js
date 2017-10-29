@@ -1,7 +1,8 @@
 //interact with the DOM functions
 
 $('#avgform').on('input', function(){
-    $('#area').html(average());
+    //$('#area').html(average());
+    $('#foot').html(average());
     console.log(getmax());
     if(getmax()[2] === getmax()[0]){
       addmore();
