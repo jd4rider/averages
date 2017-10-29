@@ -60,4 +60,12 @@ function average(){
 }
 
 
-$("[data-role=header]").fixedtoolbar({ hideDuringFocus: "input, select" });
+$('div:jqmData(role="page")').on('pageinit',function(){
+    $(document)
+        .on('focus','input, select, textarea', function(){
+            $('[data-role="header"][data-position="fixed"]').hide();
+        })
+        .on('blur','input, select, textarea',function(){
+            $('[data-role="header"][data-position="fixed"]').show();
+        });
+});
