@@ -10,3 +10,14 @@
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
 }
+
+.header { 
+    position: fixed; 
+} 
+.footer { 
+    position: fixed; 
+} 
+.fixfixed .header, 
+.fixfixed .footer { 
+    position: absolute; 
+} 
