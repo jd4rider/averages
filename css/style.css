@@ -1,5 +1,5 @@
 .form-group{
-  margin-top: 300px;
+  margin-top: 250px;
   max-width: 450px;
 }
 
@@ -12,12 +12,18 @@
 }
 
 .header { 
-    position: fixed; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
 } 
 .footer { 
     position: fixed; 
 } 
 .fixfixed .header, 
 .fixfixed .footer { 
-    position: absolute; 
+    position: absolute;
+    top: 0;
+    width: 100%; 
+    z-index: 99999;
 } 
