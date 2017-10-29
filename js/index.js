@@ -72,3 +72,17 @@ if ('ontouchstart' in window) {
         $body.removeClass('fixfixed');
     });
 }
+
+var focus = 0;
+var yourInput = $(".form-group, .form-control, .inputgrp, input");
+yourInput.focusin(function(){
+    if(!focus) {
+        yourInput.blur();
+        $("html, body").scrollTop($(document).height());
+        focus = 1;
+    }
+    if(focus) {
+        yourInput.focus();
+        focus = 0;
+    }
+});
