@@ -11,7 +11,7 @@
     width: 100%; /* Full width */
 }
 
-.headersss { 
+/*.headersss { 
     position: fixed;
     top: 0;
     width: 100%;
@@ -26,9 +26,9 @@
     top: 0;
     width: 100%; 
     z-index: 99999;
-} 
+} */
 
-@media only screen and (min-device-width: 320px)
+/*@media only screen and (min-device-width: 320px)
  and (max-device-width : 480px) {
    .header {
      position: absolute;
@@ -40,4 +40,4 @@
   		margin-top: 250px;
   		max-width: 450px;
 	}
- }
+ }*/
