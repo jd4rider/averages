@@ -3,7 +3,7 @@
   max-width: 450px;
 }
 
-.jumbotron {
+.jumb {
     overflow: hidden;
     /*background-color: #333;*/
     position: fixed; /* Set the navbar to fixed position */
