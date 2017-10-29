@@ -59,30 +59,30 @@ function average(){
     
 }
 
-if ('ontouchstart' in window) {
-    /* cache dom references */ 
-    var $body = $('body'); 
+// if ('ontouchstart' in window) {
+//     /* cache dom references */ 
+//     var $body = $('body'); 
 
-    /* bind events */
-    $(document)
-    .on('focus', 'input', function() {
-        $body.addClass('fixfixed');
-    })
-    .on('blur', 'input', function() {
-        $body.removeClass('fixfixed');
-    });
-}
+//     /* bind events */
+//     $(document)
+//     .on('focus', 'input', function() {
+//         $body.addClass('fixfixed');
+//     })
+//     .on('blur', 'input', function() {
+//         $body.removeClass('fixfixed');
+//     });
+// }
 
-var focus = 0;
-var yourInput = $(".form-group, .form-control, .inputgrp, input");
-yourInput.focusin(function(){
-    if(!focus) {
-        yourInput.blur();
-        $("html, body").scrollTop($(document).height());
-        focus = 1;
-    }
-    if(focus) {
-        yourInput.focus();
-        focus = 0;
-    }
-});
+// var focus = 0;
+// var yourInput = $("input");
+// yourInput.focusin(function(){
+//     if(!focus) {
+//         yourInput.blur();
+//         $("html, body").scrollTop($(document).height());
+//         focus = 1;
+//     }
+//     if(focus) {
+//         yourInput.focus();
+//         focus = 0;
+//     }
+// });

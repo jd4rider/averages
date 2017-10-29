@@ -1,5 +1,5 @@
 .form-group{
-  margin-top: 250px;
+  /*margin-top: 250px;*/
   max-width: 450px;
 }
 
@@ -11,17 +11,17 @@
     width: 100%; /* Full width */
 }
 
-.header { 
+.headersss { 
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 99999;
 } 
-.footer { 
+.footersss { 
     position: fixed; 
 } 
-.fixfixed .header, 
-.fixfixed .footer { 
+.fixfixedsss .header, 
+.fixfixedsss .footer { 
     position: absolute;
     top: 0;
     width: 100%; 
@@ -35,4 +35,9 @@
      top: 0;
      width: 100%; 
    }
+
+   .form-group{
+  		margin-top: 250px;
+  		max-width: 450px;
+	}
  }
