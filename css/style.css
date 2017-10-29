@@ -1,43 +1,4 @@
 .form-group{
-  /*margin-top: 250px;*/
   max-width: 450px;
 }
 
-.jumb {
-    overflow: hidden;
-    /*background-color: #333;*/
-    /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-}
-
-/*.headersss { 
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 99999;
-} 
-.footersss { 
-    position: fixed; 
-} 
-.fixfixedsss .header, 
-.fixfixedsss .footer { 
-    position: absolute;
-    top: 0;
-    width: 100%; 
-    z-index: 99999;
-} */
-
-/*@media only screen and (min-device-width: 320px)
- and (max-device-width : 480px) {
-   .header {
-     position: absolute;
-     top: 0;
-     width: 100%; 
-   }
-
-   .form-group{
-  		margin-top: 250px;
-  		max-width: 450px;
-	}
- }*/

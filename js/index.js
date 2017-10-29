@@ -61,37 +61,3 @@ function average(){
 }
 
 
-if ('ontouchstart' in window) {
-    $(document).on('focus', 'textarea,input,select', function() {
-        $('.header').css('position', 'absolute');
-    }).on('blur', 'textarea,input,select', function() {
-        $('.header').css('position', '');
-    });
-}
-// if ('ontouchstart' in window) {
-//     /* cache dom references */ 
-//     var $body = $('body'); 
-
-//     /* bind events */
-//     $(document)
-//     .on('focus', 'input', function() {
-//         $body.addClass('fixfixed');
-//     })
-//     .on('blur', 'input', function() {
-//         $body.removeClass('fixfixed');
-//     });
-// }
-
-// var focus = 0;
-// var yourInput = $("input");
-// yourInput.focusin(function(){
-//     if(!focus) {
-//         yourInput.blur();
-//         $("html, body").scrollTop($(document).height());
-//         focus = 1;
-//     }
-//     if(focus) {
-//         yourInput.focus();
-//         focus = 0;
-//     }
-// });
