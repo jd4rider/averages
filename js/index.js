@@ -58,3 +58,6 @@ function average(){
   return avg;
     
 }
+
+
+$("[data-role=header]").fixedtoolbar({ hideDuringFocus: "input, select" });
