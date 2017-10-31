@@ -3,9 +3,14 @@
 $('#avgform').on('input', function(){
     //$('#area').html(average());
     $('#foot').html(average());
-    console.log(getmax());
-    if(getmax()[2] === getmax()[0]){
+    //console.log(getmax());
+    var getmaxx = getmax();
+    console.log(getmaxx);
+    if(getmaxx[2] === getmaxx[0]){
       addmore();
+    }
+    if((getmaxx[2]+1)<getmaxx[0] && getmaxx[0] > 2){
+      removeone();
     }
 })
 
@@ -46,6 +51,10 @@ function getmax(){
 
 function addmore(){
     $('#inputgrp').append('<input type="number" class="form-control" id='+getmax()[1]+' style="text-align:center;"></input>');
+}
+
+function removeone(){
+  $('#'+getmax()[0]).remove();
 }
 
 function average(){
