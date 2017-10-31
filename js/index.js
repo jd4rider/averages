@@ -9,6 +9,12 @@ $('#avgform').on('input', function(){
     }
 })
 
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+        $('.form-control').next().focus();
+    }
+});
+
 //helper functions
 
 function getmax(){
