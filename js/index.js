@@ -5,7 +5,7 @@ $('#avgform').on('input', function(){
     $('#foot').html(average());
     //console.log(getmax());
     var getmaxx = getmax();
-    console.log(getmaxx);
+
     if(getmaxx[2] === getmaxx[0]){
       addmore();
     }
@@ -31,16 +31,20 @@ function getmax(){
   var nextmax = maxinput + 1;
 
   $('.form-control').each(function(i){
-    formarr.push(parseInt($(this).attr('id')));
+    formarr.push(parseFloat($(this).attr('id')));
   })
 
   $('.form-control').each(function(i){
 
-    if(!isNaN(parseInt($(this).val()))){
-        formarrnum.push(parseInt($(this).attr('id')));
+    if(!isNaN(parseFloat($(this).val()))){
+        formarrnum.push(parseFloat($(this).attr('id')));
      }
 
   })
+
+  $('input').ForceNumericOnly();
+
+
 
   maxinput = Math.max.apply(null, formarr);
   maxnuminput = formarrnum.length;
@@ -50,7 +54,7 @@ function getmax(){
 }
 
 function addmore(){
-    $('#inputgrp').append('<input type="number" class="form-control" id='+getmax()[1]+' style="text-align:center;"></input>');
+    $('#inputgrp').append('<input type="number" step="any" class="form-control" id='+getmax()[1]+' style="text-align:center;"></input>');
 }
 
 function removeone(){
@@ -62,8 +66,8 @@ function average(){
   var avg;
 
   $('.form-control').each(function(i){
-      if(!isNaN(parseInt($(this).val()))){
-        total = total + parseInt($(this).val())
+      if(!isNaN(parseFloat($(this).val()))){
+        total = total + parseFloat($(this).val())
       }
 
    })
@@ -74,3 +78,28 @@ function average(){
   return avg;
 
 }
+
+// Numeric only control handler
+jQuery.fn.ForceNumericOnly =
+function()
+{
+    return this.each(function()
+    {
+        $(this).keydown(function(e)
+        {
+            var key = e.charCode || e.keyCode || 0;
+            // allow backspace, tab, delete, enter, arrows, numbers and keypad numbers ONLY
+            // home, end, period, and numpad decimal
+            return (
+                key == 8 ||
+                key == 9 ||
+                key == 13 ||
+                key == 46 ||
+                key == 110 ||
+                key == 190 ||
+                (key >= 35 && key <= 40) ||
+                (key >= 48 && key <= 57) ||
+                (key >= 96 && key <= 105));
+        });
+    });
+};
